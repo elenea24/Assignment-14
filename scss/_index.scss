@@ -1,0 +1,323 @@
+body {
+    @extend %my-container;
+
+    .index-header {
+        @include goFlex(row, space-between, center);
+        padding: 20px 30px;
+        
+        ul {
+            width: 400px;
+            @include goFlex(row, space-between, center);
+            padding: 5px 0;
+
+           
+
+            @media (max-width: 400px){
+             display: none;
+            }
+
+            @media(max-width:$desktop-version){
+                padding: 0 180px;
+                width: 600px;
+            }
+
+              
+            @media (max-width:$tablet-version){
+                margin-left: -140px;
+                
+            }
+
+            @media (max-width:$mobile-version){
+                
+                width: 300px;
+            }
+           
+          
+            li {
+                color: $primaryColor;
+                font-size: $primaryFontSize;
+                font-weight: $primaryfontweight
+            }
+        }
+
+        .burger-menu{
+            display: none;
+            height: 30px;
+
+            @media (max-width: 400px){
+                @include goFlex(column,space-around,center)
+            }
+
+        div{
+            width: 30px;
+            height: 5px;
+            background-color: $primaryColor;
+            border-radius: 5px;
+        }
+        }
+    }
+
+
+    
+    .index-main{
+        
+       
+        @media (max-width: $desktop-version){
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @media (max-width:$tablet-version){
+           margin-left: 30px;
+        }
+        
+       
+        h1{
+            color: $primaryColor;
+            font-size: $secondaryFontSize;
+            font-weight: $primaryfontweight;
+            padding: 50px 40px 40px 25px;
+        }
+
+        section{
+            @include goFlex (row,space-evenly);
+            margin-left: -105px;
+
+            @media (max-width:$mobile-version){
+                padding: 0 50px;
+            }
+            @media (max-width:$tablet-version){
+               margin-right: -30px;
+            }
+            
+            
+
+        .index-section{
+            margin-left: 25px;
+            width: 350px;
+            height: 360px;
+            
+
+            div{
+            height: 170px;
+            padding-top: 70px;
+            padding-left: 40px;
+            }
+
+            h2{
+            color: $secondaryColor;
+            font-size: $thirdFondSize;
+            margin-top: -150px;
+            font-weight: $primaryfontweight;
+            
+            
+        }
+
+            p{
+            width: 250px;
+            margin-bottom: 10px;
+            font-size: $primaryFontSize;
+            font-weight: $primaryfontweight;
+            color: #8A8787;
+            line-height: 20px;
+            margin-left: -40px;
+        }
+
+            .clock-icon{
+            vertical-align: middle;
+        }
+
+            span{
+            font-size: $primaryFontSize;
+            font-weight: $primaryfontweight;
+            color: #8A8787;
+            vertical-align: middle;
+        }
+
+        }
+    }
+
+            .content{
+                position: relative;
+                
+            }
+        
+            .index-left-side{
+            @include goFlex(row, space-between);
+            margin-left: 60px;
+
+            @media(max-width:$desktop-version){
+                padding: 0 150px;
+            }
+
+            @media(max-width:$tablet-version){
+                margin-left: -80px;
+            }
+
+            
+
+            .img1{
+                padding-bottom: 50px;
+                padding-top: 30px;
+                margin-left: 25px;
+
+                @media (max-width:$mobile-version){
+                    width: 450px;
+                    margin-left: -20px;
+                   
+                }
+
+                @media(max-width: $tablet-version){
+                    width: 750px;
+                }
+                
+            }
+        
+            
+            h4{
+            position: absolute;
+            color: $secondaryColor;
+            font-size: $secondaryFontSize;
+            margin-bottom: 40px;
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 200px;
+            font-weight: $primaryfontweight;
+
+            @media (max-width:$desktop-version){
+                margin-left: 250px;
+                padding: 70px 0;
+            }
+             
+            @media (max-width: $tablet-version){
+                padding:70px 60px ;
+            }
+            
+            @media (max-width:$mobile-version){
+                margin: 50px  70px;
+                width: 250px;
+                padding: 90px 0;
+            }
+        }
+    }
+
+        .index-right-side{
+            @include goFlex (row);
+            gap: 100px;
+            margin-left: 850px;
+            margin-top: -980px;
+
+            @media (max-width:$desktop-version){
+                margin: 90px;
+                justify-content: center;
+                
+                 
+            }
+
+            @media(max-width:$tablet-version){
+                margin: 30px ;
+                padding: 0 150px;
+            }
+
+            @media (max-width:$mobile-version){
+                padding: 50px 0;
+            }
+            
+
+            img {
+                @media (max-width:$mobile-version){
+                    width: 300px;
+                }
+            }
+        }
+
+    
+
+}
+
+        .index-footer{
+            background-color: #243043;
+            width: 100%;
+            height:240px;
+            margin-top: 120px;
+
+            
+
+          nav{
+            padding: 20px 20px 10px 80px;
+            @media(max-width:$mobile-version){
+                margin-left: -50px;
+            }
+            
+          
+
+          .ul{
+            margin-top: 50px;
+          }
+         
+          .ul2{
+           margin-left: 80px;
+           margin-top: -135px;
+          }
+
+          .ul3{
+            margin-left: 180px;
+            margin-top: -165px;
+            
+          }
+
+          li{
+            color: $thirdcolor;
+            font-size: $primaryFontSize;
+            font-weight: $primaryfontweight;
+            margin-bottom: 15px;
+
+            @media (max-width:$mobile-version){
+                font-size: 10px;
+            }
+          }
+        }
+
+          h5{
+            margin-left: 600px;
+            margin-top: -180px;
+            color: $secondaryColor;
+            font-size: 15px;
+
+            @media (max-width:$desktop-version){
+                margin-left: 500px;
+               }
+
+            @media(max-width:$tablet-version){
+             margin-left: 400px;
+            }
+
+            @media(max-width:$mobile-version){
+                margin-left: 300px;
+            }
+
+    
+
+          }
+           .logo1{
+            margin-left: 1300px;
+            margin-top: -50px;
+
+            @media (max-width:$desktop-version){
+                margin-left:900px ;
+            }
+
+            @media (max-width:$tablet-version){
+             margin-left: 700px;
+            }
+
+            @media (max-width:$mobile-version){
+              margin-left: 300px;
+              margin-top: 30px;
+            }
+           }
+           
+        }
+        
+    
+}
